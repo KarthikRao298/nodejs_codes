@@ -1,0 +1,32 @@
+$ mongod --dbpath ./data_db/
+
+On another terminal :
+
+$ mongo --host 127.0.0.1:27017
+$ use library
+
+db.students.insert({ _id:801012350, firstName:'Karthik', lastName:'R',  degree:'MS',  program:'SIS'})
+
+db.courses.insert({ studentId:801012350, CRN:18936, semester:'s2018',  grade:'A'})
+
+db.students.find({firstName:'Karthik'})
+
+db.courses.find({studentId:801012350})
+
+
+db.students.update({'firstName':'Claus'},{$set:{'program':'Electrical Engineering'}})
+
+db.courses.update({'CRN':'18945'},{$set:{'CRN':'20945'}})
+
+db.students.remove({'firstName':'Bruce'})
+db.courses.remove({'CRN':'18936'})
+
+db.createCollection(media)
+
+
+document = ( { Type : "Book", Title : "Definitive Guide to MongoDB", ISBN : "987-1-4302-3051-9", Publisher : "Apress", Author: ["Membrey, Peter", "Plugge, Eelco", "Hawkins, Tim" ] } ) 
+
+db.media.insert(document) 
+
+db.media.insert( { Type : "CD" ,Artist : "Nirvana",Title : "Nevermind", Tracklist : [ { Track : "1 ", Title : "Smells like teen spirit", Length : "5:02 "}, { Track : "2 ", Title : "In Bloom", Length : "4:15 " } ]} ) 
+
