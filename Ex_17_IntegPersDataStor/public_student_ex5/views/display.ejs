@@ -1,0 +1,57 @@
+<% include partials/header.ejs %>
+<body>
+  <div class="main" >
+
+  <table id="student">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Degree</th>
+      <th>Program</th>
+    </tr>
+
+	<%for(var i = 0;i < studentList.length; i++){%>
+    <tr>
+
+		<td>
+			<%= studentList[i].firstName %>
+			</td>
+			<td>
+			<%= studentList[i].lastName %>
+			</td>
+			<td>
+			<%= studentList[i].degree %>
+			</td>
+			<td>
+			<%= studentList[i].program %>
+			</td>
+	</tr>
+
+			<%}%>
+
+
+ 
+
+    <tr>
+      <td colspan="4">
+      </td>
+
+
+
+    </tr>
+    </table>
+
+
+
+
+  </div>
+
+
+
+
+
+</body>
+</html>
+
+
+

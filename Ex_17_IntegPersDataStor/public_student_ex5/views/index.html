@@ -1,0 +1,90 @@
+<html>
+<body>
+
+    <h1> This is the Student Information home page </h1>
+
+    <p>
+        Welcome. Click back button of browser to revisit this home page.
+
+	 
+    </p>
+		 <input type="button" class="btn btn-primary" 
+	 value="Display a table listing all the students in the database"
+	 onclick="location.href = '/display'">
+
+
+
+
+
+    <p>
+    <p>
+        Add a search box (input field) that will accept a student first
+		name as input and results in displaying a table listing all students in the
+		database that match the string provided in the search box
+
+	 
+    </p>
+        <form action="/display" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="40" />
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Search Info" />
+
+        </form>
+    </p>
+
+
+    <p>
+    <p>
+Update the application so when a new form is submitted it checks the list of stored students in the database and if there is a matching student update their record with the newly submitted data and if there is no matching student a new entry will be added to the database with the information submitted.
+	 
+    </p>
+
+        <form action="/studentInfo" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Last Name:</label></td>
+                    <td>
+                        <input type="text" name="lastName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Degree:</label></td>
+                    <td>
+                        <input type="text" name="degree" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Program:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="program" size="40" />
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Update Record" />
+
+        </form>
+    </p>
+
+</body>
+
+</html>
